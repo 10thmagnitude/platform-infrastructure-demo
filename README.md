@@ -1,3 +1,3 @@
 # platform-infrastructure-demo
 
-Demonstration infrastructure for Azure with an ARM resource.
+Demonstration infrastructure for Azure with an ARM template resource.
