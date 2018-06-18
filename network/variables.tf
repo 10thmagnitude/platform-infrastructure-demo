@@ -10,6 +10,11 @@ variable "environments" {
   type = "map"
 
   default = {
+    default = {
+      location    = ""
+      environment = ""
+    }
+
     A1D = {
       location    = "centralus"
       environment = "Development"
