@@ -6,8 +6,8 @@ provider "azurerm" {
 }
 
 locals {
-  location    = "${lookup(var.environments[terraform.workspace], "location")}"
-  environment = "${lookup(var.environments[terraform.workspace], "environment")}"
+  location    = "${lookup(var.config[var.workspace], "location")}"
+  environment = "${lookup(var.config[var.workspace], "environment")}"
 }
 
 resource "azurerm_resource_group" "demo" {
@@ -15,7 +15,7 @@ resource "azurerm_resource_group" "demo" {
   location = "${local.location}"
 
   tags {
-    environment = "${local.location}"
+    environment = "${local.environment}"
   }
 }
 
@@ -26,7 +26,7 @@ resource "azurerm_virtual_network" "demo" {
   address_space       = ["10.0.0.0/16"]
 
   tags {
-    environment = "${local.location}"
+    environment = "${local.environment}"
   }
 }
 

@@ -4,9 +4,12 @@ variable "client_id" {}
 variable "client_secret" {}
 
 # Example:
-# location = "${lookup(var.environments[terraform.workspace], "location")}"
+# location = "${lookup(var.config[var.workspace], "location")}"
+variable "workspace" {
+  default = "A1D"
+}
 
-variable "environments" {
+variable "config" {
   type = "map"
 
   default = {
