@@ -6,7 +6,7 @@ variable "client_secret" {}
 # Example:
 # location = "${lookup(var.config[var.workspace], "location")}"
 variable "workspace" {
-  default = "A1D"
+  default = "default"
 }
 
 variable "config" {
@@ -14,23 +14,31 @@ variable "config" {
 
   default = {
     default = {
-      location    = ""
-      environment = ""
+      location         = ""
+      environment      = ""
+      environment_type = ""
+      service_line     = ""
     }
 
     A1D = {
-      location    = "centralus"
-      environment = "Development"
+      location         = "centralus"
+      environment      = "Development"
+      environment_type = "dv"
+      service_line     = "glo"
     }
 
     A1Q = {
-      location    = "centralus"
-      environment = "QA"
+      location         = "centralus"
+      environment      = "QA"
+      environment_type = "qa"
+      service_line     = "glo"
     }
 
     A1P = {
-      location    = "centralus"
-      environment = "Production"
+      location         = "centralus"
+      environment      = "Production"
+      environment_type = "pr"
+      service_line     = "glo"
     }
   }
 }
