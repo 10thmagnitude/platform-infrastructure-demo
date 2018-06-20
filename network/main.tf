@@ -53,3 +53,24 @@ resource "azurerm_subnet" "demo_03" {
   virtual_network_name = "${azurerm_virtual_network.demo.name}"
   address_prefix       = "10.0.3.0/24"
 }
+
+resource "azurerm_subnet" "demo_04" {
+  name                 = "sn-platform-demo-${local.key}-04"
+  resource_group_name  = "${azurerm_resource_group.demo.name}"
+  virtual_network_name = "${azurerm_virtual_network.demo.name}"
+  address_prefix       = "10.0.4.0/24"
+}
+
+resource "azurerm_subnet" "demo_05" {
+  name                 = "sn-platform-demo-${local.key}-05"
+  resource_group_name  = "${azurerm_resource_group.demo.name}"
+  virtual_network_name = "${azurerm_virtual_network.demo.name}"
+  address_prefix       = "10.0.5.0/24"
+}
+
+resource "azurerm_subnet" "demo_06" {
+  name                 = "sn-platform-demo-${local.key}-06"
+  resource_group_name  = "${azurerm_resource_group.demo.name}"
+  virtual_network_name = "${azurerm_virtual_network.demo.name}"
+  address_prefix       = "10.0.6.0/24"
+}
