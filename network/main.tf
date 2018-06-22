@@ -37,40 +37,40 @@ resource "azurerm_subnet" "demo_01" {
   name                 = "sn-platform-demo-${local.key}-01"
   resource_group_name  = "${azurerm_resource_group.demo.name}"
   virtual_network_name = "${azurerm_virtual_network.demo.name}"
-  address_prefix       = "10.0.10.0/24"
+  address_prefix       = "10.0.1.0/24"
 }
 
 resource "azurerm_subnet" "demo_02" {
   name                 = "sn-platform-demo-${local.key}-02"
   resource_group_name  = "${azurerm_resource_group.demo.name}"
   virtual_network_name = "${azurerm_virtual_network.demo.name}"
-  address_prefix       = "10.0.11.0/24"
+  address_prefix       = "10.0.2.0/24"
 }
 
 resource "azurerm_subnet" "demo_03" {
   name                 = "sn-platform-demo-${local.key}-03"
   resource_group_name  = "${azurerm_resource_group.demo.name}"
   virtual_network_name = "${azurerm_virtual_network.demo.name}"
-  address_prefix       = "10.0.12.0/24"
+  address_prefix       = "10.0.3.0/24"
 }
 
 resource "azurerm_subnet" "demo_04" {
   name                 = "sn-platform-demo-${local.key}-04"
   resource_group_name  = "${azurerm_resource_group.demo.name}"
   virtual_network_name = "${azurerm_virtual_network.demo.name}"
-  address_prefix       = "10.0.13.0/24"
+  address_prefix       = "10.0.4.0/24"
 }
 
 resource "azurerm_subnet" "demo_05" {
   name                 = "sn-platform-demo-${local.key}-05"
   resource_group_name  = "${azurerm_resource_group.demo.name}"
   virtual_network_name = "${azurerm_virtual_network.demo.name}"
-  address_prefix       = "10.0.14.0/24"
+  address_prefix       = "10.0.5.0/24"
 }
 
 resource "azurerm_subnet" "demo_06" {
   name                 = "sn-platform-demo-${local.key}-06"
   resource_group_name  = "${azurerm_resource_group.demo.name}"
   virtual_network_name = "${azurerm_virtual_network.demo.name}"
-  address_prefix       = "10.0.15.0/24"
+  address_prefix       = "10.0.6.0/24"
 }
